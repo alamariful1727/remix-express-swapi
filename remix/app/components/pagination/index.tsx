@@ -1,8 +1,11 @@
+import { toQueryString } from "./../../utils/toQueryString";
 import { IGetPeopleResponse } from "./../../routes/_index";
 
-type Props = Omit<IGetPeopleResponse, 'data'>
+interface IProps extends Omit<IGetPeopleResponse, 'data'>{
+  search: string;
+}
 
-export const Pagination = ({count, currentPage, nextPage, previousPage}:Props) => {
+export const Pagination = ({count, currentPage, nextPage, previousPage, search}:IProps) => {
   return (
     <div
               aria-label="Pagination"
@@ -18,8 +21,7 @@ export const Pagination = ({count, currentPage, nextPage, previousPage}:Props) =
               <div className="flex flex-1 justify-between sm:justify-end">
                 {previousPage && 
                   <a
-                  
-                    href={`/?page=${previousPage}`}
+                    href={`/?${toQueryString({page: previousPage, search})}`}
                     className="relative inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
                   >
                     Previous
@@ -27,7 +29,7 @@ export const Pagination = ({count, currentPage, nextPage, previousPage}:Props) =
                 }
                 {nextPage && 
                   <a
-                    href={`/?page=${nextPage}`}
+                    href={`/?${toQueryString({page: nextPage, search})}`}
                     className="relative ml-3 inline-flex items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus-visible:outline-offset-0"
                   >
                     Next

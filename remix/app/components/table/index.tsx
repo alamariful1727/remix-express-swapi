@@ -1,8 +1,11 @@
 import { IGetPeopleResponse } from "./../../routes/_index";
 import { Pagination } from "../pagination";
 
+interface IProps extends IGetPeopleResponse{
+  search: string;
+}
 
-export const PeopleTable = ({count, currentPage, data, nextPage, previousPage}:IGetPeopleResponse) => {
+export const PeopleTable = ({count, currentPage, data, nextPage, previousPage, search} : IProps) => {
   return (
     <div className="mt-8 flow-root">
       <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -37,7 +40,7 @@ export const PeopleTable = ({count, currentPage, data, nextPage, previousPage}:I
               ))}
             </tbody>
           </table>
-          <Pagination count={count} currentPage={currentPage} nextPage={nextPage} previousPage={previousPage} />
+          <Pagination count={count} currentPage={currentPage} nextPage={nextPage} previousPage={previousPage} search={search} />
         </div>
       </div>
     </div>
