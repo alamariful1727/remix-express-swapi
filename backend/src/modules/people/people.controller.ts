@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from "express";
-import { GetPeopleInput } from "@src/modules/people/people.validation";
 import { getPeople } from "./people.service";
 import { IPeople } from "./people.type";
+import { GetPeopleInput } from "./people.validation";
 
 const getPageValue = (url: string): number | null => {
 	const urlObj = new URL(url);
 	const page = urlObj.searchParams.get("page");
-	return !!Number(page) ? Number(page) : null;
+	return Number(page) ? Number(page) : null;
 };
 
 interface IGetPeopleHandlerResponse {

@@ -1,8 +1,8 @@
-import { request } from "@src/utils/request";
 import config from "config";
+import { request } from "./../../utils/request";
 import { IPeople } from "./people.type";
 import { GetPeopleInput } from "./people.validation";
-import { toQueryString } from "@src/utils/toQueryString";
+import { toQueryString } from "./../../utils//toQueryString";
 
 interface IPeopleResult {
 	count: number;
