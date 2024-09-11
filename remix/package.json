@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "remix-express-swapi",
   "private": true,
   "sideEffects": false,
   "type": "module",
