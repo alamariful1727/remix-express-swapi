@@ -73,7 +73,7 @@ export default function Index() {
         <div className="sm:flex-auto">
           <h1 className="text-lg font-semibold leading-6 text-gray-900">People</h1>
           <p className="mt-2 text-sm text-gray-700">
-            A list of all people.
+            Character within the Star Wars universe.
           </p>
         </div>
 
