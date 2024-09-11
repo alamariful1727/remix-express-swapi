@@ -1,4 +1,4 @@
-import { IGetPeopleResponse } from "./../../routes/_index";
+import { IGetPeopleResponse } from "../../routes/_index";
 import { Pagination } from "../pagination";
 
 interface IProps extends IGetPeopleResponse{

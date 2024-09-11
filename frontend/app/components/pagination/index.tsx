@@ -1,5 +1,5 @@
-import { toQueryString } from "./../../utils/toQueryString";
-import { IGetPeopleResponse } from "./../../routes/_index";
+import { toQueryString } from "../../utils/toQueryString";
+import { IGetPeopleResponse } from "../../routes/_index";
 
 interface IProps extends Omit<IGetPeopleResponse, 'data'>{
   search: string;

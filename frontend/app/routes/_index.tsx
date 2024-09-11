@@ -2,9 +2,9 @@ import { useState } from "react";
 import type { LoaderFunctionArgs, MetaFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, useNavigate, useSearchParams } from "@remix-run/react";
-import restAPI from "./../api";
-import { toQueryString } from "./../utils/toQueryString";
-import { PeopleTable } from "./../components/table";
+import restAPI from "../api";
+import { toQueryString } from "../utils/toQueryString";
+import { PeopleTable } from "../components/table";
 
 export const meta: MetaFunction = () => {
   return [
